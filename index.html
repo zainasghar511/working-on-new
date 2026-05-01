@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza website</title>
+    <link rel="stylesheet" href="piza.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fa-solid fa-pizza-slice"></i></div>
+        <div class="search"><input type="text" placeholder="Search for pizza ,Burger..." id="menusearch"></div>
+        <div class="Phone"><i class="fa-solid fa-phone"></i><span>0307 7697853</span></div>
+    </header>
+    <main class="main">
+        <section class="silder-container">
+            <div class="silder-wrap" id="dealsilder">
+                <div class="deal-card">
+                    <img src="deal1.png" alt="Deal1">
+                </div>
+                 <div class="deal-card">
+                    <img src="deal2.png" alt="Deal2">
+                </div>
+                 <div class="deal-card">
+                    <img src="deal3.png" alt="Deal3">
+                </div>
+                 <div class="deal-card">
+                    <img src="deal4.png" alt="Deal4">
+                </div>
+                 <div class="deal-card">
+                    <img src="deal5.png" alt="Deal5">
+                </div>
+                 <div class="deal-card">
+                    <img src="deal6.png" alt="Deal6">
+                </div>
+                 <div class="deal-card">
+                    <img src="deal7.png" alt="Deal7">
+                </div>
+            </div>
+        </section>
+        <nav class="filternav" >
+            <button id="Allmenu">All menu</button>
+            <button id="Regularpizza">REGULAR PIZZA</button>
+             <button id="special">SPECIAL PIZZA</button>
+             <button id="crust">OUR PIZZA CRUST</button>
+             <button id="appetizer">APPETIZER</button>
+             <button id="burger">BURGERS</button>
+             <button id="pasta">PASTA</button>
+              <button id="rolls">ROLLS</button>
+              </nav>
+              <div id="Allitem">
+              <section class="menu-grid" id="menugrid">
+                <div class="food-item pizza">
+                    <img src="chicken tikka pizza.jpeg" alt="chicken tika pizza">
+                    <h3 id="name1">Chicken Tikka Pizza</h3>
+                    <div class="size-selection">
+                        <select  id="size-1" onchange="updatePrice(1)">
+                            <option value="450">Small-Rs-450</option>
+                              <option value="950">Medium-Rs-950</option>
+                                <option value="1300">Large-Rs-1300</option>
+                                  <option value="1500">XL-Rs-1500</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-1">450</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-1" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(1)">Order on Whats app</button>
+                    </div>
+                </div> <div class="food-item pizza">
+                    <img src="fajita.jpeg" alt="Fajita pizza">
+                    <h3 id="name2">Chicken Fajita</h3>
+                    <div class="size-selection">
+                        <select  id="size-2" onchange="updatePrice(2)">
+                            <option value="450">Small-Rs-450</option>
+                              <option value="950">Medium-Rs-950</option>
+                                <option value="1300">Large-Rs-1300</option>
+                                  <option value="1500">XL-Rs-1500</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-2">450</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-2" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(2)">Order on Whats app</button>
+                    </div>
+                </div>
+             <div class="food-item pizza">
+                    <img src="Supreme.jpeg" alt="Supreme Pizza">
+                    <h3 id="name3">Chicken Supreme</h3>
+                    <div class="size-selection">
+                        <select  id="size-3" onchange="updatePrice(3)">
+                            <option value="450">Small-Rs-450</option>
+                              <option value="950">Medium-Rs-950</option>
+                                <option value="1300">Large-Rs-1300</option>
+                                  <option value="1500">XL-Rs-1500</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-3">450</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-3" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(3)">Order on Whats app</button>
+                    </div>
+                </div>
+                 <div class="food-item pizza">
+                    <img src="chese.jpeg" alt="chese lover">
+                    <h3 id="name4">Cheese Lover</h3>
+                    <div class="size-selection">
+                        <select  id="size-4" onchange="updatePrice(4)">
+                            <option value="450">Small-Rs-450</option>
+                              <option value="950">Medium-Rs-950</option>
+                                <option value="1300">Large-Rs-1300</option>
+                                  <option value="1500">XL-Rs-1500</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-4">450</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-4" value="1" min="1">
+                        <button class="wa-btn" onclick=`sendorder(4)`>Order on Whats app</button>
+                    </div>
+                </div>
+                 <div class="food-item pizza">
+                    <img src="vegtable.jpeg" alt="Vegtable pizza">
+                    <h3 id="name5">Vegtable Pizza</h3>
+                    <div class="size-selection">
+                        <select  id="size-5" onchange="updatePrice(5)">
+                            <option value="450">Small-Rs-450</option>
+                              <option value="950">Medium-Rs-950</option>
+                                <option value="1300">Large-Rs-1300</option>
+                                  <option value="1500">XL-Rs-1500</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-5">450</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty5" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(5)">Order on Whats app</button>
+                    </div>
+                </div>
+                   <div class=" Special pizza">
+                    <img src="s special.jpeg" alt="Special bite">
+                    <h3 id="name6">Special bite</h3>
+                    <div class="size-selection">
+                        <select  id="size-6" onchange="updatePrice(6)">
+                            <option value="500">Small-Rs-500</option>
+                              <option value="1000">Medium-Rs-1000</option>
+                                <option value="1400">Large-Rs-1400</option>
+                                  <option value="1700">XL-Rs-1700</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-6">500</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-6" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(6)">Order on Whats app</button>
+                    </div>
+                </div>
+           <div class=" Special pizza">
+                    <img src="s bonfire.jpeg" alt="Bone fire">
+                    <h3 id="name7">Bone fire</h3>
+                    <div class="size-selection">
+                        <select  id="size-7" onchange="updatePrice(7)">
+                            <option value="500">Small-Rs-500</option>
+                              <option value="1000">Medium-Rs-1000</option>
+                                <option value="1400">Large-Rs-1400</option>
+                                  <option value="1700">XL-Rs-1700</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-7">500</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-7" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(7)">Order on Whats app</button>
+                    </div>
+                </div>
+                   <div class=" Special pizza">
+                    <img src="Supreme.jpeg" alt="Supreme Lebistro">
+                    <h3 id="name8">Supreme Lebistro</h3>
+                    <div class="size-selection">
+                        <select  id="size-8" onchange="updatePrice(8)">
+                            <option value="500">Small-Rs-500</option>
+                              <option value="1000">Medium-Rs-1000</option>
+                                <option value="1400">Large-Rs-1400</option>
+                                  <option value="1700">XL-Rs-1700</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-8">500</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-8" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(8)">Order on Whats app</button>
+                    </div>
+                </div>
+                    <div class=" Special pizza">
+                    <img src="achari.jpeg" alt="Achari">
+                    <h3 id="name9">Chicken achari</h3>
+                    <div class="size-selection">
+                        <select  id="size-9" onchange="updatePrice(9)">
+                         <option value="500">Small-Rs-500</option>
+                         <option value="1000">Medium-Rs-1000</option>
+                         <option value="1400">Large-Rs-1400</option>
+                          <option value="1700">XL-Rs-1700</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-9">500</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-9" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(9)">Order on Whats app</button>
+                    </div>
+                </div>
+                    <div class=" Crust pizza">
+                    <img src="bhari.jpeg" alt="Behari kbab">
+                    <h3 id="name10">Behari Kabab</h3>
+                    <div class="size-selection">
+                        <select  id="size-10" onchange="updatePrice(10)">
+                           <option value="1350">Medium-Rs-1350</option>
+                                <option value="1650">Large-Rs-1650</option>
+                                  <option value="1850">XL-Rs-1850</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-10">1350</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-10" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(10)">Order on Whats app</button>
+                    </div>
+                </div>
+                   <div class=" Crust pizza">
+                    <img src="kbaba.jpeg" alt=" kabab Stuffer">
+                    <h3 id="name11">kabab Stuffer</h3>
+                    <div class="size-selection">
+                        <select  id="size-11" onchange="updatePrice(11)">
+                           <option value="1400">Medium-Rs-1400</option>
+                                <option value="1700">Large-Rs-1700</option>
+                                  <option value="1900">XL-Rs-1900</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-11">1400</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-11" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(11)">Order on Whats app</button>
+                    </div>
+                </div>
+                    <div class=" Crust pizza">
+                    <img src="chese stuffer.jpeg" alt=" chese Stuffer">
+                    <h3 id="name12">Chicken & Cheese Stuffer</h3>
+                    <div class="size-selection">
+                        <select  id="size-12" onchange="updatePrice(12)">
+                           <option value="1400">Medium-Rs-1400</option>
+                                <option value="1700">Large-Rs-1700</option>
+                                  <option value="1900">XL-Rs-1900</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-12">1400</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-12" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(12)">Order on Whats app</button>
+                    </div>
+                </div>
+                    <div class=" Crust pizza">
+                    <img src="mlai boti stuffer.jpeg" alt=" mlai Stuffer">
+                    <h3 id="name13">Malai Boti</h3>
+                    <div class="size-selection">
+                        <select  id="size-13" onchange="updatePrice(13)">
+                           <option value="1300">Medium-Rs-1300</option>
+                                <option value="1600">Large-Rs-1600</option>
+                                  <option value="1900">XL-Rs-1800</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-13">1300</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-13" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(13)">Order on Whats app</button>
+                    </div>
+                </div>
+                    <div class=" Crust pizza">
+                    <img src="royal.jpeg" alt=" Royal Stuffer">
+                    <h3 id="name14">Royal Crust</h3>
+                    <div class="size-selection">
+                        <select  id="size-14" onchange="updatePrice(14)">
+                           <option value="1450">Medium-Rs-1450</option>
+                                <option value="1750">Large-Rs-1750</option>
+                                  <option value="1900">XL-Rs-1850</option>
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-14">1450</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-14" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(14)">Order on Whats app</button>
+                    </div>
+                </div>
+   <div class=" Appetizer">
+                    <img src="fries.jpeg" alt=" Fries">
+                    <h3 id="name15">Fries</h3>
+                    <div class="size-selection">
+                        <select  id="size-15" onchange="updatePrice(15)">
+                           <option value="200">Small-Rs-200</option>
+                                <option value="400">Large-Rs-400</option>
+                                 
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-15">200</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-15" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(15)">Order on Whats app</button>
+                    </div>
+                </div>
+                  <div class=" Appetizer">
+                    <img src="loaded.jpeg" alt=" Fries">
+                    <h3 id="name16">Loaded Fries</h3>
+                    <div class="size-selection">
+                        <select  id="size-16" onchange="updatePrice(16)">
+                           <option value="350">Small-Rs-350</option>
+                                <option value="700">Large-Rs-700</option>
+                                 
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-16">350</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-16" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(16)">Order on Whats app</button>
+                    </div>
+                </div>
+                 <div class=" Appetizer">
+                    <img src="nuggets.jpeg" alt=" nuggets">
+                    <h3 id="name17">Nuggets</h3>
+                    <div class="size-selection">
+                        <select  id="size-17" onchange="updatePrice(17)">
+                           <option value="200">5-Rs-200</option>
+                                <option value="400">10-Rs-400</option>
+                                 
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-17">200</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-17" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(17)">Order on Whats app</button>
+                    </div>
+                </div>
+ <div class=" Appetizer">
+                    <img src="hot wings.jpeg" alt=" Hot wings">
+                    <h3 id="name18">Hot wings</h3>
+                    <div class="size-selection">
+                        <select  id="size-18" onchange="updatePrice(18)">
+                           <option value="250">5-Rs-250</option>
+                                <option value="500">10-Rs-500</option>
+                                 
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-18">250</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-18" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(18)">Order on Whats app</button>
+                    </div>
+                </div>
+                 <div class=" Appetizer">
+                    <img src="ovenb.jpeg" alt=" oven wings">
+                    <h3 id="name19">Oven Baked wings</h3>
+                    <div class="size-selection">
+                        <select  id="size-19" onchange="updatePrice(19)">
+                           <option value="250">5-Rs-250</option>
+                                <option value="450">10-Rs-450</option>
+                                 
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-19">250</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-19" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(19)">Order on Whats app</button>
+                    </div>
+                </div>
+                 <div class=" Appetizer">
+                    <img src="hony.jpeg" alt=" Hony wings">
+                    <h3 id="name20">Hony spicy wings</h3>
+                    <div class="size-selection">
+                        <select  id="size-20" onchange="updatePrice(20)">
+                           <option value="250">5-Rs-250</option>
+                                <option value="500">10-Rs-500</option>
+                                 
+                        </select>
+                    </div>
+                    <p>Total:Rs.<span id="price-20">250</span></p>
+                    <div class="orderbox">
+                        <input type="number" id="qty-20" value="1" min="1">
+                        <button class="wa-btn" onclick="sendOrder(20)">Order on Whats app</button>
+                    </div>
+                </div>
+                <div class="burger">
+                <img src="zinger.jpeg" alt="zingerburger">
+                <h3 id="name21">Zinger Burger</h3>
+                <p> RS <span id="price">330</span></p>
+                
+                <div class="orderbox">
+                    <input type="number" id="qty-21" value="1" min="1">
+                    <button class="wa-btn" onclick="sendOrder(21)">Order on whats app</button>
+</div>
+                </div>
+                <div class="burger">
+                <img src="bbq burger.jpeg" alt="B.B BURGER">
+                <h3 id="name22">B.B.Q Burger</h3>
+                <p> RS <span id="price">350</span></p>
+                
+                <div class="orderbox">
+                    <input type="number" id="qty-22" value="1" min="1">
+                    <button class="wa-btn" onclick="sendOrder(22)">Order on whats app</button>
+</div>
+                </div>
+                <div class="burger">
+                <img src="petty burger.jpeg" alt="pettyburger">
+                <h3 id="name23">Chicken Petty Burger</h3>
+                <p> RS <span id="price">280</span></p>
+                
+                <div class="orderbox">
+                    <input type="number" id="qty-23" value="1" min="1">
+                    <button class="wa-btn" onclick="sendOrder(23)">Order on whats app</button>
+</div>
+                </div>
+                <div class="burger">
+                <img src="tower.jpeg" alt="Tower">
+                <div class="p">
+                <select name="burger" id="burger">
+                <option value="burger">
+                    <h3 id="na24">Burger Jalapeno Burger</h3></option>
+               <option value="burger"> <h3 id="name24">Pizza Slice Zinger Burger</h3>
+                </option>
+                </select>
+                </div>
+                <div id="price">
+                <select name="price" id="pric">
+                <option value="price">
+                <p> RS <span id="pri">500</span></p> </option>
+                  <option value="price">
+                     <p> RS<span id="pr">550</span></p>
+                </option>
+                </select>
+                </div>
+                <div class="orderbox">
+                    <input type="number" id="qty-24" value="1" min="1">
+                    <button class="wa-btn" onclick="sendOrder(24)">Order on whats app</button>
+</div>
+                </div>
+                <div class="pasta">
+                    <img src="creamy pasta.jpeg" alt="creamy Pasta">
+                    <h3 id="name25">Creamy Pasta</h3>
+                  <select name="pasta" id="pastaa">
+                        <option value="380">Smal:380</option>
+                         <option value="750">Medium:780</option>
+                        
+                    </select>
+                        
+  <div class="orderp">
+     <input type="number" id="qty-25" value="1" min="1">
+                    <button class="wa-btn" onclick="sendOrder(25)">Order on whats app</button>
+  </div>
+                </div>
+                 <div class="pasta">
+                    <img src="flaming pasta.jpeg" alt="Flaming Pasta">
+                    <h3 id="name26">Flaming Pasta</h3>
+                  <select name="pasta" id="pastaa">
+                        <option value="380">Smal:380</option>
+                         <option value="750">Medium:780</option>
+                        
+                    </select>
+                        
+  <div class="orderp">
+     <input type="number" id="qty-26" value="1" min="1">
+                    <button class="wa-btn" onclick="sendOrder(26)">Order on whats app</button>
+  </div>
+                </div>
+
+ <div class="pasta">
+                    <img src="cruncy  pasta.jpeg" alt="cruncy Pasta">
+                    <h3 id="name27">Crunchy Pasta</h3>
+                  <select name="pasta" id="pastaa">
+                        <option value="380">Smal:380</option>
+                         <option value="750">Medium:780</option>
+                        
+                    </select>
+                        
+  <div class="orderp">
+     <input type="number" id="qty-27" value="1" min="1">
+                    <button class="wa-btn" onclick="sendOrder(27)">Order on whats app</button>
+  </div>
+                </div>
+                <div class="rolls">
+                    <img src="pizza shwrma.jpeg" alt="pizza">
+                    <h3 id="name28">Pizza Shawarma</h3>
+                    <p>RS:300</p>
+                    <div class="orderroll">
+                        <input type="number" id="qty-28" value="1" min="1">
+                            <button class="wa-btn" onclick="sendOrder(28)">Order on whats app</button>
+                    </div>
+                </div>
+                  <div class="rolls">
+                    <img src="spin roll.jpeg" alt="pizza">
+                    <h3 id="name29">Pizza Paratha Roll</h3>
+                    <p>RS:350</p>
+                    <div class="orderroll">
+                        <input type="number" id="qty-29" value="1" min="1">
+                            <button class="wa-btn" onclick="sendOrder(29)">Order on whats app</button>
+                    </div>
+                </div>
+                  <div class="rolls">
+                    <img src="zinger shwrma.jpeg" alt="zinger">
+                    <h3 id="name30">Zinger Shawarma</h3>
+                    <p>RS:300</p>
+                    <div class="orderroll">
+                        <input type="number" id="qty-30" value="1" min="1">
+                            <button class="wa-btn" onclick="sendOrder(30)">Order on whats app</button>
+                    </div>
+                </div>
+                  <div class="rolls">
+                    <img src="par.jpeg" alt="pizza">
+                    <h3 id="name31">Zinger Paratha</h3>
+                    <p>RS:350</p>
+                    <div class="orderroll">
+                        <input type="number" id="qty-31" value="1" min="1">
+                            <button class="wa-btn" onclick="sendOrder(31)">Order on whats app</button>
+                    </div>
+                </div>
+                  <div class="rolls">
+                    <img src="paratha.jpeg" alt="pizza">
+                    <h3 id="name32">Pizza Paratha Plan</h3>
+                    <p>RS:550</p>
+                    <div class="orderroll">
+                        <input type="number" id="qty-32" value="1" min="1">
+                            <button class="wa-btn" onclick="sendOrder(32)">Order on whats app</button>
+                    </div>
+                </div>
+                  <div class="rolls">
+                    <img src="spin roll.jpeg" alt="pizza">
+                    <h3 id="name33">Spin Roll</h3>
+                    <p>RS:550</p>
+                    <div class="orderroll">
+                        <input type="number" id="qty-33" value="1" min="1">
+                            <button class="wa-btn" onclick="sendOrder(33)">Order on whats app</button>
+                    </div>
+                </div>
+  <div class="rolls">
+                    <img src="chicken.jpeg" alt="chicken paratha">
+                    <h3 id="name34">Chicken Paratha</h3>
+                    <p>RS:300</p>
+                    <div class="orderroll">
+                        <input type="number" id="qty-34" value="1" min="1">
+                            <button class="wa-btn" onclick="sendOrder(34)">Ord er on whats app</button>
+                    </div>
+                </div>
+                </div>
+                
+              </section>
+    </main>
+    <footer>
+        <div class="footercon">
+            <p><i class="fa-solid fa-location-dot"></i>Jalandar Wala Pull 267||Free Home Delivery</p>
+            <p>&Copy;2024 Pizza Slice.All Rights Reserved</p>
+            <h6>If you want to make website contact with<p>0******3</p></h6>
+            <a href="https://www.linkedin.com/in/zain-asghar-web/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+    
+</body>
+<script src="pizza.js"></script>
+</html> 
