@@ -1,2 +1,36 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+
+Pizza Slice - Online Food Ordering System
+​A modern, responsive, and user-friendly food ordering web application. This project allows users to browse various food categories like Pizza, Burgers, Pasta, and Rolls, search for specific items, and place orders directly via WhatsApp.
+​ Key Features
+​Category Filtering: Easily filter food items by categories (Regular Pizza, Special Pizza, Burgers, etc.) with a single click.
+​Live Search: Real-time search functionality to find your favorite food instantly.
+​Auto-Sliding Deals: An automated promotional slider to showcase the latest deals and offers.
+​Dynamic Price Calculation: Prices update automatically based on the selected size (Small, Medium, Large, XL).
+​WhatsApp Integration: Seamless ordering process that sends item details, size, and quantity directly to the shop's WhatsApp number.
+​Fully Responsive: Optimized for all devices, including mobile phones, tablets, and desktops.
+​🛠️ Built With
+​HTML5: For the semantic structure of the website.
+​CSS3: For custom styling, layout, and smooth animations.
+​JavaScript (Vanilla): For the filtering logic, search functionality, price updates, and slider control.
+​fontAwesome: For high-quality vector icons.
+​ Project Structure
+​index.html - The main structure and content of the website.
+​piza.css - Contains all the styling, including the grid layout and slider effects.
+​pizza.js - The core logic for searching, filtering, and WhatsApp API integration.
+​assets/ - Folder containing food images and promotional deal banners.
+​ Setup Instructions
+​Download/Clone: Download the project files to your local machine.
+​Image Paths: Ensure all images are placed in the correct directory as referenced in the HTML.
+​Run: Open index.html in any modern web browser (Chrome, Firefox, Edge, etc.).
+​WhatsApp Connectivity: An active internet connection is required to redirect users to WhatsApp for ordering.
+​🛒 How to Place an Order
+​Browse the menu or use the Search Bar to find an item.
+​Select your preferred Size from the dropdown menu (the price will update automatically).
+​Choose the Quantity you wish to order.
+​Click the "Order on WhatsApp" button. This will open WhatsApp with a pre-formatted message containing all your order details.
+​👨‍💻 Developer Information
+​If you want a professional website for your business, feel free to contact:
+​Developer: Zain Asghar
+​LinkedIn: Zain Asghar
+​Contact Number: 0307-7697853
+​© 2024 Pizza Slice. All Rights Reserved
